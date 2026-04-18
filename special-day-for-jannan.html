@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jannan Special Day</title>
+
+<style>
+body{
+margin:0;
+font-family:sans-serif;
+background: radial-gradient(circle at top,#4b0082,#1a0026,#000);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.screen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+.hidden{display:none;}
+
+.glow{
+color:#ffd700;
+text-shadow:0 0 10px #ffd700,0 0 30px #ff00ff,0 0 60px #8a2be2;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+color:white;
+font-weight:bold;
+background: linear-gradient(45deg,#ff00ff,#8a2be2,#4b00ff);
+background-size:200%;
+animation:btn 3s linear infinite;
+box-shadow:0 0 20px #ff00ff;
+}
+
+@keyframes btn{
+0%{background-position:0%}
+100%{background-position:200%}
+}
+
+.option{
+padding:12px;
+margin:10px;
+border-radius:20px;
+background:rgba(255,255,255,0.15);
+cursor:pointer;
+transition:.2s;
+}
+.option:hover{
+background:rgba(255,0,255,0.3);
+transform:scale(1.05);
+}
+
+#noBtn{
+position:relative;
+background:linear-gradient(45deg,#ff1493,#8a2be2);
+}
+
+/* scroll */
+.scroll{
+height:70vh;
+overflow-y:auto;
+max-width:700px;
+line-height:1.8;
+padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="s1" class="screen">
+<h1 class="glow">HAPPY BIRTHDAY</h1>
+<h2>Jannan 🎀</h2>
+<button onclick="go(2)">OPEN</button>
+</div>
+
+<div id="s2" class="screen hidden">
+<h1 class="glow">Do you love me? 🥺</h1>
+<button onclick="yes()">YES 💖</button>
+<button id="noBtn">NO 😅</button>
+<p id="msg"></p>
+</div>
+
+<div id="s3" class="screen hidden">
+<h1 class="glow">YOU ARE MY EVERYTHING 💫</h1>
+<button onclick="go(4)">NEXT</button>
+</div>
+
+<div id="s4" class="screen hidden">
+<h1 class="glow">LOVE QUIZ 💜</h1>
+<p id="q"></p>
+<div id="ops"></div>
+<p id="res"></p>
+<button onclick="next()">NEXT</button>
+</div>
+
+<div id="s5" class="screen hidden">
+<h1 class="glow">Here is your birthday gift 🎁</h1>
+</div>
+
+<div id="s6" class="screen hidden">
+<h1 class="glow">💖 FOR YOU JANNAN 🎀 💖</h1>
+
+<div class="scroll">
+
+<p>Happy Birthday MY JAAN ❤️🐵</p>
+
+<p>MY SPECIAL PERSON ❤️🌍<br>
+Who brings so much joy to my heart ❤️</p>
+
+<p>God bless you all the time 🥰<br>
+And give you uncountable happiness and success in your life 😍💫<br>
+I wish your happiness never ends 😌💕</p>
+
+<p>On this beautiful day, may you get all the peace, love and joy 💖🌍</p>
+
+<p><b>Happy Birthday the OWNER OF MY HEART ❤️</b><br>
+My everything 💫</p>
+
+<p>I'm very thankful for every moment we spend together ❤️😘<br>
+I wish our love never ends 💖🧿<br>
+You make me smile every time 😍<br>
+I'm always thinking about you 🐵👀</p>
+
+<p>I love you Jannan🎀 🌸💞🥺 and I can't explain how much 💖<br>
+I love you sooo much Jannan🎀 💘🧿 my heart ❤️</p>
+
+<p>Please stay with me forever ♾️❤️🥺<br>
+I'm nothing without you 😢❤️</p>
+
+<p><b>I LOVE YOU Jannan🎀 ❤️👀🧿</b></p>
+
+<p>I just popped in to tell you ❤️🐻<br>
+How much I love you Jannan🎀 💓🐵</p>
+
+<p>You're so special, sweet and cute for me 🥰🕊️</p>
+
+<p>I feel so lucky to have you ❤️🥺<br>
+My love, you make me so happy ❤️😩</p>
+
+<p>You are literally my favorite human in the world 🌍❤️💀<br>
+You have a pure heart and beautiful personality 💖🧿</p>
+
+<p>I will always support you no matter what ♾️🌸<br>
+I love you so muchhh Jannan🎀 👀❤️</p>
+
+<p><b>Stay forever with me ❤️✨</b></p>
+
+<p>Stay happy always Jannan🎀 💖</p>
+
+<h2 class="glow">💖 I LOVE YOU SO MUCH JANNAN 🎀❤️</h2>
+
+<p class="glow">💖 Aur main hamesha tumhare saath rahunga 💖💖</p>
+
+</div>
+</div>
+
+<script>
+function go(n){
+document.querySelectorAll(".screen").forEach(s=>s.classList.add("hidden"));
+document.getElementById("s"+n).classList.remove("hidden");
+}
+
+function yes(){
+msg.innerText="❤️ I Love You Too!";
+setTimeout(()=>go(3),1000);
+}
+
+/* NO move */
+let active=false;
+noBtn.addEventListener("mouseover",()=>active=true);
+
+document.addEventListener("mousemove",()=>{
+if(active){
+noBtn.style.position="absolute";
+noBtn.style.left=Math.random()*window.innerWidth*0.8+"px";
+noBtn.style.top=Math.random()*window.innerHeight*0.8+"px";
+}
+});
+
+/* quiz */
+let quiz=[
+{q:"What do I love?",o:["Smile","Eyes","Everything","All of the above"],c:3},
+{q:"How long?",o:["1 year","10 years","Forever","All"],c:2}
+];
+
+let i=0;
+function load(){
+q.innerText=quiz[i].q;
+ops.innerHTML="";
+quiz[i].o.forEach((e,x)=>{
+ops.innerHTML+=`<div class="option" onclick="check(${x})">${e}</div>`;
+});
+}
+
+function check(x){
+if(x==quiz[i].c){
+res.innerText="💖 You are my everything";
+}else{
+res.innerText="😅 try again";
+}
+}
+
+function next(){
+i++;
+if(i<quiz.length){
+load();
+}else{
+go(5);
+setTimeout(()=>go(6),1500);
+}
+}
+
+load();
+</script>
+
+</body>
+  </html>
