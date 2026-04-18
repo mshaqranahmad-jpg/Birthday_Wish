@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Jannan 💖</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #ff6a88, #ff99ac);
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#yes {
+    background: white;
+    color: #ff4081;
+}
+
+#no {
+    background: black;
+    color: white;
+    position: absolute;
+}
+
+p {
+    padding: 20px;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1 id="title">Jannan 🎀💖</h1>
+    <p id="text">Do you love me? 😍</p>
+
+    <button id="yes" onclick="showLove()">Yes 💖</button>
+    <button id="no" onmouseover="moveButton()">No 😜</button>
+</div>
+
+<script>
+function moveButton() {
+    const btn = document.getElementById("no");
+    btn.style.top = Math.random() * window.innerHeight + "px";
+    btn.style.left = Math.random() * window.innerWidth + "px";
+}
+
+function showLove() {
+    document.getElementById("title").innerHTML = "🎂 Happy Birthday Jannan 🎀💖";
+    document.getElementById("text").innerHTML = 
+`Happy Birthday MY JAAN ❤️🐵<br>
+MY SPECIAL PERSON ❤️🌍<br>
+Who brings so much joy to my heart ❤️<br><br>
+
+God bless you all the time 🥰<br>
+And give you uncountable happiness and success in your life 😍💫<br>
+I wish your happiness never ends 😌💕<br><br>
+
+On this beautiful day, may you get all the peace, love and joy 💖🌍<br><br>
+
+Happy Birthday the OWNER OF MY HEART ❤️<br>
+My everything 💫<br>
+I'm very thankful for every moment we spend together ❤️😘<br>
+I wish our love never ends 💖🧿<br>
+You make me smile every time 😍<br>
+I'm always thinking about you 🐵👀<br>
+I love you Jannan🎀 🌸💞🥺<br>
+I love you sooo much Jannan🎀 💘🧿<br>
+Please stay with me forever ♾️❤️🥺<br>
+I'm nothing without you 😢❤️<br>
+I LOVE YOU Jannan🎀 ❤️👀🧿<br><br>
+
+Stay forever with me ❤️✨<br><br>
+
+Stay happy always Jannan🎀 💖`;
+}
+</script>
+
+</body>
+</html>
