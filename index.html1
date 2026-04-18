@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Jannan 💖</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #ff6a88, #ff99ac);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #ff4081;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+p {
+    white-space: pre-line;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1 id="title">Hey Jannan 🎀💖</h1>
+    <p id="text">I have something special for you...</p>
+    <button onclick="nextStep()">Start 💌</button>
+</div>
+
+<script>
+let step = 0;
+
+function nextStep() {
+    step++;
+
+    if(step === 1){
+        document.getElementById("text").innerHTML = "Do you want to see something beautiful? 😍";
+    }
+    else if(step === 2){
+        document.getElementById("text").innerHTML = "Are you ready for a little journey? 💫";
+    }
+    else if(step === 3){
+        document.getElementById("text").innerHTML = "Because this is all about YOU 💖";
+    }
+    else if(step === 4){
+        document.getElementById("text").innerHTML = "Jannan 🎀, tum meri life ka sab se khoobsurat hissa ho ❤️";
+    }
+    else if(step === 5){
+        document.getElementById("text").innerHTML = "Tumhari smile meri duniya hai 😍✨";
+    }
+    else if(step === 6){
+        document.getElementById("text").innerHTML = "Aur main hamesha tumhare saath rehna chahta hoon 💞";
+    }
+    else {
+        document.getElementById("title").innerHTML = "🎂 Happy Birthday Jannan 🎀💖";
+        document.getElementById("text").innerHTML = 
+`Happy Birthday MY JAAN ❤️🐵<br>
+MY SPECIAL PERSON ❤️🌍<br>
+Who brings so much joy to my heart ❤️<br><br>
+
+God bless you all the time 🥰<br>
+And give you uncountable happiness and success in your life 😍💫<br>
+I wish your happiness never ends 😌💕<br><br>
+
+On this beautiful day, may you get all the peace, love and joy 💖🌍<br><br>
+
+Happy Birthday the OWNER OF MY HEART ❤️<br>
+My everything 💫<br>
+I'm very thankful for every moment we spend together ❤️😘<br>
+I wish our love never ends 💖🧿<br>
+You make me smile every time 😍<br>
+I'm always thinking about you 🐵👀<br>
+I love you 🌸💞🥺 and I can't explain how much 💖<br>
+I love you sooo much 💘🧿 my heart ❤️<br>
+Please stay with me forever ♾️❤️🥺<br>
+I'm nothing without you 😢❤️<br>
+I LOVE YOU ❤️👀🧿<br><br>
+
+I just popped in to tell you ❤️🐻<br>
+How much I love you 💓🐵<br>
+You're so special, sweet and cute for me 🥰🕊️<br><br>
+
+I feel so lucky to have you ❤️🥺<br>
+My love, you make me so happy ❤️😩<br>
+You are literally my favorite human in the world 🌍❤️💀<br>
+You have a pure heart and beautiful personality 💖🧿<br>
+I will always support you no matter what ♾️🌸<br>
+I love you so muchhh 👀❤️<br><br>
+
+Stay forever with me ❤️✨<br><br>
+
+Stay happy always Jannan 🎀💖`;
+    }
+}
+</script>
+
+</body>
+</html>
