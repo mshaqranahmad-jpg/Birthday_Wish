@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Jannan 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6a88, #ff99ac);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Smooth fade animation */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* Button animation */
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4081;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+/* Text */
+p {
+    white-space: pre-line;
+    font-size: 18px;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {transform: translateY(0); opacity: 1;}
+    100% {transform: translateY(-100vh); opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container fade" id="box">
+    <h1 id="title">Hey Jannan 🎀💖</h1>
+    <p id="text">I have something special for you...</p>
+    <button onclick="nextStep()">Start 💌</button>
+</div>
+
+<script>
+let step = 0;
+
+function animate() {
+    let box = document.getElementById("box");
+    box.classList.remove("show");
+    setTimeout(()=>box.classList.add("show"),100);
+}
+
+function nextStep() {
+    step++;
+    animate();
+
+    if(step === 1){
+        document.getElementById("text").innerHTML = "Do you want to see something beautiful? 😍";
+    }
+    else if(step === 2){
+        document.getElementById("text").innerHTML = "Are you ready for a little journey? 💫";
+    }
+    else if(step === 3){
+        document.getElementById("text").innerHTML = "Because this is all about YOU 💖";
+    }
+    else if(step === 4){
+        document.getElementById("text").innerHTML = "Jannan 🎀, tum meri life ka sab se khoobsurat hissa ho ❤️";
+    }
+    else if(step === 5){
+        document.getElementById("text").innerHTML = "Tumhari smile meri duniya hai 😍✨";
+    }
+    else if(step === 6){
+        document.getElementById("text").innerHTML = "Aur main hamesha tumhare saath rehna chahta hoon 💞";
+    }
+    else {
+        document.getElementById("title").innerHTML = "🎂 Happy Birthday Jannan 🎀💖";
+        document.getElementById("text").innerHTML = 
+`Happy Birthday MY JAAN ❤️🐵<br>
+MY SPECIAL PERSON ❤️🌍<br>
+Who brings so much joy to my heart ❤️<br><br>
+
+God bless you all the time 🥰<br>
+And give you uncountable happiness and success in your life 😍💫<br>
+I wish your happiness never ends 😌💕<br><br>
+
+Stay forever with me ❤️✨<br><br>
+
+💖 I LOVE YOU SO MUCH JANNAN 🎀❤️<br>
+💖 Aur main hamesha tumhare saath rahunga 💖`;
+    }
+}
+
+/* Hearts animation */
+function hearts(){
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "💖";
+    h.style.left = Math.random()*100+"vw";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),5000);
+}
+setInterval(hearts,400);
+
+/* First load animation */
+window.onload = () => {
+    document.getElementById("box").classList.add("show");
+};
+</script>
+
+</body>
+</html>
